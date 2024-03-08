@@ -49,4 +49,14 @@ export class ChildComponent {
     console.log('ngAfterContentChecked');
     this.changeLog.push('ngAfterContentChecked');
   }
+
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit');
+    this.changeLog.push('ngAfterViewInit');
+  }
+
+  ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked');
+    this.changeLog.push('ngAfterViewChecked');
+  }
 }
