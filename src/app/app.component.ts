@@ -15,6 +15,7 @@ import { ChildComponent } from './components/child/child.component'
 export class AppComponent {
   private number: number = 235353535355;
   secondValue: number = 11111;
+  numbers: number[] = [];
 
   get counter() {
     return this.number;
@@ -32,5 +33,9 @@ export class AppComponent {
   decrement() {
     console.log('decrement');
     this.counter--;
+  }
+
+  add() {
+    this.numbers.push(1)
   }
 }

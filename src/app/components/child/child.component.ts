@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common'; //ngFor
 export class ChildComponent {
   @Input() myCounter!: number;
   @Input() secondValue!: number;
+  @Input() numbers!: number[];
 
   public changeLog: string[] = [];
 
@@ -31,5 +32,10 @@ export class ChildComponent {
   ngOnInit(): void {
     console.log('ngOnInit');
     this.changeLog.push('ngOnInit');
+  }
+
+  ngDoCheck(): void {
+    console.log('ngDoCheck');
+    this.changeLog.push(`ngDoCheck: ${this.numbers.toString()}`);
   }
 }
