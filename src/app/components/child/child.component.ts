@@ -28,5 +28,8 @@ export class ChildComponent {
     }
   }
 
-
+  ngOnInit(): void {
+    console.log('ngOnInit');
+    this.changeLog.push('ngOnInit');
+  }
 }
