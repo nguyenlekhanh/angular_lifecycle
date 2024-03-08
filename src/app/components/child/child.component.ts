@@ -18,6 +18,7 @@ export class ChildComponent {
   public changeLog: string[] = [];
 
   ngOnChanges(changes: SimpleChanges): void {
+    console.log('ngOnChanges');
     for(const propName in changes) {
       const change: SimpleChange = changes[propName];
       const current = JSON.stringify(change.currentValue);
@@ -37,5 +38,10 @@ export class ChildComponent {
   ngDoCheck(): void {
     console.log('ngDoCheck');
     this.changeLog.push(`ngDoCheck: ${this.numbers.toString()}`);
+  }
+
+  ngAfterContentInit(): void {
+    console.log('ngAfterContentInit');
+    this.changeLog.push('ngAfterContentInit');
   }
 }

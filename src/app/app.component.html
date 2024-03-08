@@ -5,6 +5,8 @@
     <button (click)="decrement()">Decrement</button>
     <button (click)="add()">Add</button>
 
-    <app-child [myCounter]="counter" [secondValue] = "secondValue" [numbers]="numbers"></app-child>
+    <app-child [myCounter]="counter" [secondValue] = "secondValue" [numbers]="numbers">
+      Hello this is coming from parent component content projection
+    </app-child>
   </div>
 </div>
