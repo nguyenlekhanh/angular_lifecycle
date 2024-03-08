@@ -36,6 +36,6 @@ export class AppComponent {
   }
 
   add() {
-    this.numbers.push(1)
+    this.numbers = [...this.numbers, 1]
   }
 }
