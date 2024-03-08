@@ -59,4 +59,9 @@ export class ChildComponent {
     console.log('ngAfterViewChecked');
     this.changeLog.push('ngAfterViewChecked');
   }
+
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy');
+    this.changeLog.push('ngOnDestroy');
+  }
 }

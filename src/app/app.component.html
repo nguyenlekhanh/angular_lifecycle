@@ -4,8 +4,14 @@
     <button (click)="increment()">Increment</button>
     <button (click)="decrement()">Decrement</button>
     <button (click)="add()">Add</button>
+    <button (click)="setVisibility()">setVisibility</button>
 
-    <app-child [myCounter]="counter" [secondValue] = "secondValue" [numbers]="numbers">
+    <app-child 
+      *ngIf="isVisible"
+      [myCounter]="counter" 
+      [secondValue] = "secondValue" 
+      [numbers]="numbers"
+    >
       Hello this is coming from parent component content projection
     </app-child>
   </div>
